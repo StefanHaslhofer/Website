@@ -8,12 +8,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material';
+import { ProjectComponent } from './project/project.component';
+import { ContentCardComponent } from './content-card/content-card.component';
+import {AboutComponent} from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProjectComponent,
+    ContentCardComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
