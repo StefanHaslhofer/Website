@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-content-card',
@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentCardComponent implements OnInit {
 
-  constructor() { }
+  //TODO determine conent card type by parameter given in json coming from parent div
+  //@Input()
+  //contentType: ContentType = ContenType.BASIC;
+
+  @Input()
+  description: string;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
