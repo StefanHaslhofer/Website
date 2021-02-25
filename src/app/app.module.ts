@@ -1,16 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './home/home.component';
 import {RouterModule} from '@angular/router';
-import { AppRoutingModule } from './app-routing.module';
-import { NavbarComponent } from './navbar/navbar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppRoutingModule} from './app-routing.module';
+import {NavbarComponent} from './navbar/navbar.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule, MatToolbarModule} from '@angular/material';
-import { ProjectComponent } from './project/project.component';
-import { ContentCardComponent } from './content-card/content-card.component';
-import {AboutComponent} from './about/about.component';
+import {ProjectComponent} from './project/project.component';
+import {ContentCardComponent} from './content-card/content-card.component';
+import {AboutComponent} from './about/about.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,9 +28,11 @@ import {AboutComponent} from './about/about.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

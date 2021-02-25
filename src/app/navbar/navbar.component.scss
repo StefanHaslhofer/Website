@@ -1,7 +1,7 @@
 @import "src/variables.scss";
 
 $navbar-white: rgba($website-primary-white, 1);
-$navbar-green: rgba($website-primary-neon-green, 0.75);
+$navbar-brown: rgba($website-primary-bown, 0.9);
 $navbar-green-light: rgba($website-primary-neon-green-light, 0.7);
 $navbar-yellow: rgba($website-primary-neon-yellow, 1);
 
@@ -38,7 +38,7 @@ $navbar-yellow: rgba($website-primary-neon-yellow, 1);
 
     a:hover {
 
-      box-shadow: inset 1000px 0 0 0 $navbar-green;
+      box-shadow: inset 1000px 0 0 0 $navbar-brown;
       background-position: top;
     }
   }

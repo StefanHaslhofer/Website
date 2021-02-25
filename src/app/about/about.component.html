@@ -1,1 +1,3 @@
-<div>asdasd</div>
+<div *ngFor="let cardData of cards" class="card-wrapper">
+  <app-content-card [cardData]="cardData"></app-content-card>
+</div>

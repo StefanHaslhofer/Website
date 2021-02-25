@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ContentCardData} from '../models/content-card-data';
 
 @Component({
   selector: 'app-content-card',
@@ -7,12 +8,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ContentCardComponent implements OnInit {
 
-  //TODO determine conent card type by parameter given in json coming from parent div
-  //@Input()
-  //contentType: ContentType = ContenType.BASIC;
-
   @Input()
-  description: string;
+  cardData: ContentCardData;
 
   constructor() {
   }

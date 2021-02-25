@@ -1,0 +1,34 @@
+@import "src/variables.scss";
+
+.content-card {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 40%;
+  }
+
+  .content-card-text {
+    margin: 20px;
+  }
+
+  .content-card-image {
+    width: 100%;
+    padding: 1em 6em;
+    transition: all 0.4s cubic-bezier(0.445, 0.045, 0.355, 1.2);
+    background-image: url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+}
+
+.content-card:hover {
+  .content-card-image {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  transition: all .4s ease-in;
+  background-color: rgba($website-primary-bown, 0.7)
+}
