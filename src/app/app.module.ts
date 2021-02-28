@@ -9,9 +9,10 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule, MatToolbarModule} from '@angular/material';
 import {ProjectComponent} from './project/project.component';
-import {ContentCardComponent} from './content-card/content-card.component';
-import {AboutComponent} from './about/about.component'
+import {PictureTextCardComponent} from './picture-text-card/picture-text-card.component';
+import {AboutComponent} from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PictureCardComponent } from './picture-card/picture-card.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     NavbarComponent,
     ProjectComponent,
-    ContentCardComponent,
-    AboutComponent
+    PictureTextCardComponent,
+    AboutComponent,
+    PictureCardComponent
   ],
   imports: [
     BrowserModule,

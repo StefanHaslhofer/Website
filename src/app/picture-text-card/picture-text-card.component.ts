@@ -2,11 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import {ContentCardData} from '../models/content-card-data';
 
 @Component({
-  selector: 'app-content-card',
-  templateUrl: './content-card.component.html',
-  styleUrls: ['./content-card.component.scss']
+  selector: 'app-picture-text-card',
+  templateUrl: './picture-text-card.component.html',
+  styleUrls: ['./picture-text-card.component.scss']
 })
-export class ContentCardComponent implements OnInit {
+export class PictureTextCardComponent implements OnInit {
 
   @Input()
   cardData: ContentCardData;
