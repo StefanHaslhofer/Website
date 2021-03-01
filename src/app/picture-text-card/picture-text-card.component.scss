@@ -2,9 +2,6 @@
 
 .picture-text-card {
 
-  img {
-    width: 40%;
-  }
 
   .picture-text-card-image {
     width: 100%;
@@ -14,7 +11,25 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+}
 
+
+@media screen and (max-width: 800px) {
+  .picture-text-card {
+
+    .picture-text-card-image {
+      width: auto;
+      height: 80%;
+      padding: 4em 6em;
+    }
+  }
+
+  .picture-text-card:hover {
+    .picture-text-card-image {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
 }
 
 .picture-text-card:hover {
