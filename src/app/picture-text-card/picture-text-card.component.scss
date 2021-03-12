@@ -1,8 +1,6 @@
 @import "src/variables.scss";
 
 .picture-text-card {
-
-
   .picture-text-card-image {
     width: 100%;
     padding: 1em 6em;
@@ -41,5 +39,11 @@
   }
 
   transition: all .4s ease-in;
-  background-color: rgba($website-primary-bown, 0.85)
+
+  .website-simple-line {
+    stroke-dashoffset: 0;
+
+    box-shadow: inset 1000px 0 0 0 $website-primary-bown;
+    background-position: top;
+  }
 }
