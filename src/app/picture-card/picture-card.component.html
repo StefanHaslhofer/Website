@@ -1,4 +1,8 @@
 <div class="picture-card content-card">
-  <div class="picture-text-card-image"></div>
-  <div class="picture-text-card-image"></div>
+  <div class="picture-card-grid">
+    <div class="image-wrapper" *ngFor="let picture of cardData.pictureUrls">
+      <div class="image" [ngStyle]="{'background-image': 'url(' + picture + ')'}">
+      </div>
+    </div>
+  </div>
 </div>

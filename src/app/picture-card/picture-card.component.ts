@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ContentCardData} from '../models/content-card-data';
 
 @Component({
   selector: 'app-picture-card',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./picture-card.component.scss']
 })
 export class PictureCardComponent implements OnInit {
+
+  @Input()
+  cardData: ContentCardData;
 
   constructor() { }
 

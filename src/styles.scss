@@ -101,12 +101,19 @@ body {
       }
     }
   }
+
+  app-picture-card {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 800px) {
   .card-wrapper {
-    .content-card {
-      flex-direction: column;
+
+    app-picture-text-card {
+      .content-card {
+        flex-direction: column;
+      }
     }
 
     .content-card-text {
