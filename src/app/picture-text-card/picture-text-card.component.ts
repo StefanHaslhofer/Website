@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ContentCardData} from '../models/content-card-data';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-picture-text-card',
@@ -11,10 +12,14 @@ export class PictureTextCardComponent implements OnInit {
   @Input()
   cardData: ContentCardData;
 
-  constructor() {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
+  }
+
+  loadProjectOverview(title: string): void {
+    this.router.navigate([title], {relativeTo: this.activatedRoute});
   }
 
 }

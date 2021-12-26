@@ -7,12 +7,13 @@ import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {NavbarComponent} from './navbar/navbar.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCardModule, MatToolbarModule} from '@angular/material';
+import {MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
 import {ProjectComponent} from './project/project.component';
 import {PictureTextCardComponent} from './picture-text-card/picture-text-card.component';
 import {AboutComponent} from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PictureCardComponent } from './picture-card/picture-card.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PictureCardComponent } from './picture-card/picture-card.component';
     ProjectComponent,
     PictureTextCardComponent,
     AboutComponent,
-    PictureCardComponent
+    PictureCardComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { PictureCardComponent } from './picture-card/picture-card.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

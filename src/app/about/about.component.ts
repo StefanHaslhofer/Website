@@ -11,7 +11,7 @@ import {ContentCardData} from '../models/content-card-data';
 })
 export class AboutComponent implements OnInit {
 
-  // url to json file which includes the card data on the page
+// url to json file which includes the card data on the page
   private _aboutCardJsonURL = 'assets/content/aboutCards.json';
 
   private cards: ContentCardData[] = [];

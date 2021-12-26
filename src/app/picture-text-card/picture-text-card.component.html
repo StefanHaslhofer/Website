@@ -1,8 +1,12 @@
-<div class="picture-text-card content-card">
-  <div class="picture-text-card-image"></div>
+<div class="picture-text-card content-card" [ngClass]="cardData.direction === 'reverse' ? 'content-card-reverse' : ''">
+  <div class="picture-text-card-image"
+       [ngStyle]="{'background-image': 'url(/assets/pictures/' + cardData.pictureUrl + ')'}"></div>
   <br>
   <div class="content-card-text picture-text-card-text">
-    <h3 class="content-card-header">Ueberschrift</h3>
+    <div class="content-card-header" (click)="loadProjectOverview(cardData.title)">
+      <h3>{{cardData.title}}</h3>
+      <mat-icon aria-label="Take a closer look">keyboard_arrow_right</mat-icon>
+    </div>
     <svg class="website-simple-svg">
       <line x1="0" y1="0" x2="100%" y2="0" class="website-simple-line"/>
     </svg>

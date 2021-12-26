@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {ProjectComponent} from './project/project.component';
 import {AboutComponent} from './about/about.component';
+import {ProjectDetailComponent} from './project-detail/project-detail.component';
 
 const routes: Routes = [
   {
@@ -15,10 +16,18 @@ const routes: Routes = [
         component: ProjectComponent
       },
       {
+        path: 'projects/:name',
+        component: ProjectDetailComponent
+      },
+      {
         path: 'about',
         component: AboutComponent
       },
-      { path: '',   redirectTo: 'about', pathMatch: 'full' }
+      {
+        path: 'about/:name',
+        component: ProjectDetailComponent
+      },
+      {path: '', redirectTo: 'about', pathMatch: 'full'}
     ]
   },
 
@@ -28,4 +37,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
