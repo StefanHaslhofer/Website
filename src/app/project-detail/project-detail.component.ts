@@ -13,17 +13,14 @@ import {ProjectDetailState} from '../state/project-detail.state';
 export class ProjectDetailComponent implements OnInit {
 
   siteContent: SiteContent;
-  cards: ContentCardData[];
 
-  constructor(private contentFileService: ContentFileService, private store: Store, private changeDetectorRef: ChangeDetectorRef) {
+  constructor(private contentFileService: ContentFileService, private store: Store) {
   }
 
   ngOnInit() {
     const fileUrl: string = this.store.selectSnapshot(ProjectDetailState.contentFile);
     this.contentFileService.getSiteContent(fileUrl).subscribe(content => {
       this.siteContent = content;
-      this.cards = this.siteContent.cards;
-      this.changeDetectorRef.detectChanges();
     });
   }
 }
