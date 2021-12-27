@@ -1,5 +1,4 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {ContentCardData} from '../models/content-card-data';
+import {Component, OnInit} from '@angular/core';
 import {SiteContent} from '../models/site-content';
 import {ContentFileService} from '../service/content-file.service';
 import {Store} from '@ngxs/store';
