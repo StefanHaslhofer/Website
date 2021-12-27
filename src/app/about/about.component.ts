@@ -1,7 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {PictureTextCardComponent} from '../picture-text-card/picture-text-card.component';
 import {ContentCardData} from '../models/content-card-data';
 import {ContentFileService} from '../content-file.service';
 

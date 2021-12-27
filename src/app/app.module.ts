@@ -11,9 +11,9 @@ import {MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule} from '@
 import {ProjectComponent} from './project/project.component';
 import {PictureTextCardComponent} from './picture-text-card/picture-text-card.component';
 import {AboutComponent} from './about/about.component';
-import { HttpClientModule } from '@angular/common/http';
-import { PictureCardComponent } from './picture-card/picture-card.component';
-import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import {HttpClientModule} from '@angular/common/http';
+import {PictureCardComponent} from './picture-card/picture-card.component';
+import {ProjectDetailComponent} from './project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
