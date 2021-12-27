@@ -18,6 +18,7 @@ import {environment} from '../environments/environment';
 import {NgxsModule} from '@ngxs/store';
 import {ProjectDetailState} from './state/project-detail.state';
 import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
+import {NgxsStoragePluginModule} from "@ngxs/storage-plugin";
 
 @NgModule({
   declarations: [
@@ -50,6 +51,9 @@ import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
           ...state
         };
       }
+    }),
+    NgxsStoragePluginModule.forRoot({
+      key: 'projectDetail'
     })
   ],
   providers: [],

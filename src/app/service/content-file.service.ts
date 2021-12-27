@@ -3,7 +3,7 @@ import {ContentCardData} from '../models/content-card-data';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
-import {SiteContent} from "../models/site-content";
+import {SiteContent} from '../models/site-content';
 
 @Injectable({
   providedIn: 'root'

@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ContentCardData} from '../models/content-card-data';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Store} from "@ngxs/store";
-import {PatchProjectDetail} from "../state/project-detail.action";
+import {Store} from '@ngxs/store';
+import {PatchProjectDetail} from '../state/project-detail.action';
 
 @Component({
   selector: 'app-picture-text-card',

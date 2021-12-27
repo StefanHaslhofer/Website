@@ -22,7 +22,7 @@ export class ProjectDetailState {
 
 
   @Action(PatchProjectDetail)
-  setIndex(ctx: StateContext<ProjectDetailStateModel>, action: PatchProjectDetail) {
+  patchProjectDetail(ctx: StateContext<ProjectDetailStateModel>, action: PatchProjectDetail) {
     ctx.setState(
       produce(ctx.getState(), (draft) => {
         draft.contentFile = action.projectDetail.contentFile;
