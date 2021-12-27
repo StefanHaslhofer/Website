@@ -1,12 +1,14 @@
 <mat-toolbar class="website-toolbar" >
+  <div class="website-toolbar-options" >
+    <a [routerLink]="'/about'" routerLinkActive="website-toolbar-active-link">
+      <h1>About</h1>
+    </a>
+  </div>
   <div class="website-toolbar-name">
     <h1>Stefan Haslhofer</h1>
   </div>
   <div class="website-toolbar-options">
-    <a [routerLink]="''">
-      <h1>About</h1>
-    </a>
-    <a [routerLink]="'/projects'">
+    <a [routerLink]="'/projects'" routerLinkActive="website-toolbar-active-link">
       <h1>Projects</h1>
     </a>
   </div>
