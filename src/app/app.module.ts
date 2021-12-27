@@ -14,6 +14,9 @@ import {AboutComponent} from './about/about.component';
 import {HttpClientModule} from '@angular/common/http';
 import {PictureCardComponent} from './picture-card/picture-card.component';
 import {ProjectDetailComponent} from './project-detail/project-detail.component';
+import {environment} from '../environments/environment';
+import { NgxsModule } from '@ngxs/store';
+import {ProjectDetailState} from './state/project-detail-state';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import {ProjectDetailComponent} from './project-detail/project-detail.component'
     MatCardModule,
     HttpClientModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    NgxsModule.forRoot([ProjectDetailState], {
+      developmentMode: !environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

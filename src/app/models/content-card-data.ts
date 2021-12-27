@@ -7,6 +7,7 @@ export class ContentCardData {
   title: string;
   direction?: string;
   cards: ContentCardData[]; // display information about project via cards
+  contentFile: string;
 
   deserialize(input: any): ContentCardData {
     if (input) {
@@ -17,6 +18,7 @@ export class ContentCardData {
       this.title = input.title;
       this.direction = input.direction;
       this.cards = input.cards;
+      this.contentFile = input.contentFile;
     }
 
     return this;
