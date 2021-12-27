@@ -50,6 +50,10 @@ body {
   }
 }
 
+app-about {
+  max-width: 90%;
+}
+
 /*************************** scrollbar styling ***************************/
 html::-webkit-scrollbar {
   display: none;
@@ -104,6 +108,11 @@ html {
       h3 {
         margin: 0;
       }
+
+      button {
+        line-height: inherit;
+        height: inherit;
+      }
     }
 
     &::-webkit-scrollbar {
@@ -112,7 +121,7 @@ html {
   }
 
   app-picture-text-card {
-    width: 70%;
+    max-width: 90%;
     height: 15rem;
 
     .picture-text-card {

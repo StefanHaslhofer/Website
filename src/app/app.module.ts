@@ -7,7 +7,7 @@ import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {NavbarComponent} from './navbar/navbar.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
 import {ProjectComponent} from './project/project.component';
 import {PictureTextCardComponent} from './picture-text-card/picture-text-card.component';
 import {AboutComponent} from './about/about.component';
@@ -34,7 +34,8 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
     MatToolbarModule,
     MatCardModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

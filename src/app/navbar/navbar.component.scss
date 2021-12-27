@@ -26,7 +26,6 @@ $navbar-yellow: rgba($website-primary-neon-yellow, 1);
 
   .website-toolbar-options {
     display: flex;
-    justify-content: space-around;
     width: 45%;
     height: 100%;
     text-transform: uppercase;
@@ -41,26 +40,32 @@ $navbar-yellow: rgba($website-primary-neon-yellow, 1);
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      flex-grow: 0.45;
-      box-shadow: inset 0 0 0 0 $navbar-yellow;
-      transition: all ease-in-out 0.4s;
+      flex-grow: 0.25;
     }
 
     a:hover {
-      box-shadow: inset 200px 0 0 0 $navbar-brown;
-      background-position: top;
-      transition: all ease-in-out 0.4s;
+      background-color: rgba(0, 0, 0, 0.05);
+      transition: all ease 0.4s;
       h1 {
-        color: $website-primary-dark;
+        color: $navbar-brown;
         opacity: 1;
+        transition: all ease 0.2s;
       }
     }
 
     .website-toolbar-active-link {
-      color: $navbar-brown;
       h1 {
+        color: $navbar-brown;
         opacity: 1;
       }
     }
+  }
+
+  .website-toolbar-options-right {
+    justify-content: start;
+  }
+
+  .website-toolbar-options-left {
+    justify-content: end;
   }
 }
