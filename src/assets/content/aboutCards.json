@@ -3,14 +3,14 @@
     "type": "picture-text",
     "title": "Skiurlaub 2021",
     "pictureUrl": "skiing2021/skiing_groupphoto.jpg",
-    "description": "Der alljährlicher Skiurlaub hat uns diesmal, nicht wie üblich, ins wunderschöne obersteirische Schladming, sondern ins Salzburgerland gebracht. Dieses Jahr ebenfalls neu: Technikunterstützung durch eine GoPro-Helmkamera...",
-    "contentFile": "skiingtrip2021"
+    "description": "Der alljährliche Skiurlaub hat uns diesmal, nicht wie üblich, ins wunderschöne obersteirische Schladming, sondern ins Salzburgerland gebracht. Dieses Jahr ebenfalls neu: Technikunterstützung durch eine GoPro-Helmkamera...",
+    "contentFile": "skiingtrip2021.json"
   },
   {
     "type": "picture-text",
     "title": "Norway 2021",
     "pictureUrl": "norway/kjerag.jpg",
-    "description": "After a long, demanding and expensive preparation we finally set of to Nowray. From stunning fjords to gorgeous mountains we were overwhelmed with a picturesque view only known to me from stock photos and movies at this point...",
+    "description": "After a long, demanding and expensive preparation we finally set of to Norway. From stunning fjords to gorgeous mountains we were overwhelmed with a picturesque view only known to me from stock photos and movies at this point...",
     "direction": "reverse"
   }
 ]

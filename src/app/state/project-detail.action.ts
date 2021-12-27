@@ -1,6 +1,6 @@
-import {ProjectDetailStateModel} from './project-detail-state';
+import {ProjectDetailStateModel} from './project-detail.state';
 
 export class PatchProjectDetail {
   static readonly type = '[ProjectDetail] Patch Project Detail';
-  constructor(public projectDetailModel: ProjectDetailStateModel) {}
+  constructor(public projectDetail: ProjectDetailStateModel) {}
 }

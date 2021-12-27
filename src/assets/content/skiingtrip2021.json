@@ -1,8 +1,15 @@
 {
   "title": "Skiurlaub 2021",
   "date": "27.12.2021",
-  "description": "Der alljährlicher Skiurlaub hat uns diesmal, nicht wie üblich, ins wunderschöne obersteirische Schladming, sondern ins Salzburgerland gebracht. Dieses Jahr ebenfalls neu: Technikunterstützung durch eine GoPro-Helmkamera...",
+  "description": "Der alljährliche Skiurlaub hat uns diesmal, nicht wie üblich, ins wunderschöne obersteirische Schladming, sondern ins Salzburgerland gebracht. Dieses Jahr ebenfalls neu: Technikunterstützung durch eine GoPro-Helmkamera...",
   "cards": [
+    {
+      "type": "picture-text",
+      "title": "Skiurlaub 2021",
+      "pictureUrl": "skiing2021/skiing_groupphoto.jpg",
+      "description": "Der alljährliche Skiurlaub hat uns diesmal, nicht wie üblich, ins wunderschöne obersteirische Schladming, sondern ins Salzburgerland gebracht. Dieses Jahr ebenfalls neu: Technikunterstützung durch eine GoPro-Helmkamera...",
+      "contentFile": "skiingtrip2021.json"
+    },
     {
       "type": "picture",
       "pictureUrls": [

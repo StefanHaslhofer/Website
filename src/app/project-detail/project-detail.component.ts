@@ -1,6 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {ContentCardData} from '../models/content-card-data';
 import {SiteContent} from '../models/site-content';
+import {ContentFileService} from '../service/content-file.service';
+import {Store} from '@ngxs/store';
+import {ProjectDetailState} from '../state/project-detail.state';
 
 @Component({
   selector: 'app-project-detail',
@@ -10,11 +13,17 @@ import {SiteContent} from '../models/site-content';
 export class ProjectDetailComponent implements OnInit {
 
   siteContent: SiteContent;
-  cardData: ContentCardData;
+  cards: ContentCardData[];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private contentFileService: ContentFileService, private store: Store, private changeDetectorRef: ChangeDetectorRef) {
   }
 
+  ngOnInit() {
+    const fileUrl: string = this.store.selectSnapshot(ProjectDetailState.contentFile);
+    this.contentFileService.getSiteContent(fileUrl).subscribe(content => {
+      this.siteContent = content;
+      this.cards = this.siteContent.cards;
+      this.changeDetectorRef.detectChanges();
+    });
+  }
 }

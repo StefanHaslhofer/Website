@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ContentCardData} from '../models/content-card-data';
-import {ContentFileService} from '../content-file.service';
+import {ContentFileService} from '../service/content-file.service';
 
 @Component({
   selector: 'app-about',

@@ -15,8 +15,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {PictureCardComponent} from './picture-card/picture-card.component';
 import {ProjectDetailComponent} from './project-detail/project-detail.component';
 import {environment} from '../environments/environment';
-import { NgxsModule } from '@ngxs/store';
-import {ProjectDetailState} from './state/project-detail-state';
+import {NgxsModule} from '@ngxs/store';
+import {ProjectDetailState} from './state/project-detail.state';
+import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,14 @@ import {ProjectDetailState} from './state/project-detail-state';
     MatButtonModule,
     NgxsModule.forRoot([ProjectDetailState], {
       developmentMode: !environment.production
+    }),
+    NgxsReduxDevtoolsPluginModule.forRoot({
+      disabled: environment.production,
+      stateSanitizer: (state) => {
+        return {
+          ...state
+        };
+      }
     })
   ],
   providers: [],
