@@ -2,8 +2,9 @@ export class ContentCardData {
 
   type: string;
   description: string;
-  pictureUrl: string;
-  pictureUrls: string[];
+  pictureUrl?: string;
+  pictureUrls?: string[];
+  pictureFolder: string; // instead of single pictureUrls the whole source-folder can be provided
   title: string;
   direction?: string;
   contentFile: string;

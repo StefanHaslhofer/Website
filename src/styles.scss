@@ -54,6 +54,32 @@ app-about, app-project, app-project-detail {
   max-width: 90%;
 }
 
+app-project-detail {
+  width: 90%;
+}
+
+/*************************** heading and subheading styling ***************************/
+.website-header {
+  margin-bottom: $website-margin;
+
+  .website-header-title {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      margin: 0;
+    }
+
+    .website-header-title-date {
+      font-size: 90%;
+      opacity: 0.5;
+      z-index: -1;
+    }
+  }
+}
+
 /*************************** scrollbar styling ***************************/
 html::-webkit-scrollbar {
   display: none;
@@ -76,6 +102,15 @@ html {
     stroke: $website-primary-bown;
     stroke-width: 4;
   }
+
+  .website-title-line {
+    stroke: $website-primary-bown;
+    stroke-width: 4;
+  }
+}
+
+.website-title-svg {
+  width: 110% !important;
 }
 
 /*************************** card-styling ***************************/
@@ -96,7 +131,7 @@ html {
   }
 
   .content-card-text {
-    margin: 15px;
+    margin: $website-margin-px;
 
     .content-card-header {
       margin-top: 3px;

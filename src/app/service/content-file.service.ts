@@ -10,14 +10,15 @@ import {SiteContent} from '../models/site-content';
 })
 export class ContentFileService {
 
-  private cards: ContentCardData[] = [];
+  resourceBaseUrl = 'assets/content/';
+  pictureBaseUrl = 'assets/pictures/';
 
   constructor(private http: HttpClient) {
   }
 
   // load json data via http-cient
-  public getJSON(jsonUrl: string): Observable<any> {
-    return this.http.get('assets/content/' + jsonUrl);
+  private getJSON(jsonUrl: string): Observable<any> {
+    return this.http.get(this.resourceBaseUrl + jsonUrl);
   }
 
   public getCards(jsonUrl: string): Observable<ContentCardData[]> {
@@ -26,5 +27,9 @@ export class ContentFileService {
 
   public getSiteContent(jsonUrl: string): Observable<SiteContent> {
     return this.getJSON(jsonUrl).pipe(map((data: any) => new SiteContent().deserialize(data)));
+  }
+
+  public getPictureUrl(dir: string, file: string): string {
+    return this.pictureBaseUrl + dir + file;
   }
 }
