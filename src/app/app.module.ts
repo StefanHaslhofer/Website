@@ -19,6 +19,7 @@ import {NgxsModule} from '@ngxs/store';
 import {ProjectDetailState} from './state/project-detail.state';
 import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
 import {NgxsStoragePluginModule} from "@ngxs/storage-plugin";
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {NgxsStoragePluginModule} from "@ngxs/storage-plugin";
     PictureTextCardComponent,
     AboutComponent,
     PictureCardComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
