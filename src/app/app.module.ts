@@ -20,6 +20,7 @@ import {ProjectDetailState} from './state/project-detail.state';
 import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
 import {NgxsStoragePluginModule} from "@ngxs/storage-plugin";
 import { FooterComponent } from './footer/footer.component';
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { FooterComponent } from './footer/footer.component';
     }),
     NgxsStoragePluginModule.forRoot({
       key: 'projectDetail'
-    })
+    }),
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
