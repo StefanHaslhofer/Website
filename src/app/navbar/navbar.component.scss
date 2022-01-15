@@ -7,6 +7,7 @@ $navbar-yellow: rgba($website-primary-neon-yellow, 1);
 
 
 .website-toolbar {
+  z-index: 10;
   position: fixed;
   top: 0;
   background-color: $navbar-white;
@@ -46,6 +47,7 @@ $navbar-yellow: rgba($website-primary-neon-yellow, 1);
     a:hover {
       background-color: rgba(0, 0, 0, 0.05);
       transition: all ease 0.4s;
+
       h1 {
         color: $navbar-brown;
         opacity: 1;

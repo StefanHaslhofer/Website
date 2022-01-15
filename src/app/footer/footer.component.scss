@@ -7,21 +7,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  .website-media-wrapper {
-    width: 300px;
-    mat-nav-list {
-      mat-list-item {
-        height: 36px;
-        font-size: 100% !important;
-        color: $website-primary-creme;
-        svg {
-          fill: $website-primary-creme;
-        }
-      }
-    }
-  }
-  #instagram-img {
-    opacity: 0.8;
-  }
 }

@@ -75,7 +75,6 @@ app-project-detail {
     .website-header-title-date {
       font-size: 90%;
       opacity: 0.5;
-      z-index: -1;
     }
   }
 }
@@ -189,6 +188,23 @@ html {
     app-picture-text-card {
       width: 85%;
       height: 25rem;
+    }
+  }
+}
+
+/*************************** content-credit links ***************************/
+.website-media-wrapper {
+  width: 300px;
+
+  mat-nav-list {
+    mat-list-item {
+      height: 36px;
+      font-size: 100% !important;
+      color: $website-primary-creme !important;
+
+      svg {
+        fill: $website-primary-creme;
+      }
     }
   }
 }

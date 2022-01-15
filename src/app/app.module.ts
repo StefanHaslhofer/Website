@@ -21,6 +21,7 @@ import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
 import {NgxsStoragePluginModule} from "@ngxs/storage-plugin";
 import { FooterComponent } from './footer/footer.component';
 import {MatListModule} from "@angular/material/list";
+import { ContentCreditComponent } from './content-credit/content-credit.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {MatListModule} from "@angular/material/list";
     AboutComponent,
     PictureCardComponent,
     ProjectDetailComponent,
-    FooterComponent
+    FooterComponent,
+    ContentCreditComponent
   ],
   imports: [
     BrowserModule,
