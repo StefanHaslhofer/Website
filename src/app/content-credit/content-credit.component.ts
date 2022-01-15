@@ -5,12 +5,19 @@ import {ContentFileService} from '../service/content-file.service';
 @Component({
   selector: 'app-content-credit',
   templateUrl: './content-credit.component.html',
-  styleUrls: ['./content-credit.component.css']
+  styleUrls: ['./content-credit.component.scss']
 })
 export class ContentCreditComponent implements OnInit {
 
   @Input()
   public contentCredit: ContentCredit[];
+
+  @Input()
+  public showHeading = false;
+
+  @Input()
+  public imgHeight = 24;
+
 
   constructor(public contentFileService: ContentFileService) {
   }

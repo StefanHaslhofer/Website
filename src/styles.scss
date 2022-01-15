@@ -112,7 +112,7 @@ html {
   width: 110% !important;
 }
 
-/*************************** card-styling ***************************/
+/*************************** card styling ***************************/
 .card-wrapper {
   margin-bottom: $website-margin;
   display: flex;
@@ -169,6 +169,36 @@ html {
 
   app-picture-card {
     width: 100%;
+
+    .mat-nav-list {
+      .mat-list-item {
+        color: $website-primary-dark !important;
+
+        .website-media-icon {
+          // it is not possible to fill svgs directly when they are inside an img-tag
+          // therefore it is necessary to use the css-"filter" property
+
+          // i used https://codepen.io/sosuke/pen/Pjoqqp to calculate the right properties
+          filter: invert(15%) sepia(8%) saturate(615%) hue-rotate(13deg) brightness(92%) contrast(87%)!important;
+        }
+      }
+      .mat-list-item:hover {
+        background-color: transparent;
+      }
+    }
+
+    .content-credit-wrapper {
+      padding-top: $website-margin-px;
+      display: flex;
+      justify-content: flex-end;
+
+      font-size: 90%;
+      opacity: 0.5;
+
+      .mat-list-base .mat-list-item {
+        height: auto;
+      }
+    }
   }
 }
 
@@ -188,27 +218,6 @@ html {
     app-picture-text-card {
       width: 85%;
       height: 25rem;
-    }
-  }
-}
-
-/*************************** content-credit links ***************************/
-.website-media-wrapper {
-  width: 300px;
-
-  mat-nav-list {
-    mat-list-item {
-      height: 36px;
-      font-size: 100% !important;
-      color: $website-primary-creme !important;
-
-      .website-media-icon {
-        // it is not possible to fill svgs directly when they are inside an img-tag
-        // therefore it is necessary to use the css-"filter" property
-
-        // i used https://codepen.io/sosuke/pen/Pjoqqp to calculate the right properties
-        filter: invert(100%) sepia(25%) saturate(2947%) hue-rotate(191deg) brightness(119%) contrast(87%);
-      }
     }
   }
 }

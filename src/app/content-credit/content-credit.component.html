@@ -1,9 +1,10 @@
 <div class="website-media-wrapper">
+  <p class="website-media-heading" *ngIf="showHeading">Photos by:</p>
   <mat-nav-list>
     <mat-list-item *ngFor="let content of contentCredit">
       <a matLine [href]="content.mediaPlatformLink"
          target="_blank">{{content.mediaPlatformUsername}}</a>
-      <img class="website-media-icon"
+      <img class="website-media-icon" [height]="imgHeight" [width]="imgHeight"
            [src]="getIcon(content.mediaPlatformIcon)|safe:'resourceUrl'" alt="icon">
     </mat-list-item>
   </mat-nav-list>

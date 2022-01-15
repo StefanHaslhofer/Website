@@ -1,3 +1,5 @@
+@import "src/variables.scss";
+
 .picture-card-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

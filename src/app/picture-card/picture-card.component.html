@@ -5,5 +5,8 @@
       </div>
     </div>
   </div>
-  <app-content-credit *ngIf="cardData.contentCredit" [contentCredit]="cardData.contentCredit"></app-content-credit>
+</div>
+<div class="content-credit-wrapper">
+  <app-content-credit *ngIf="cardData.contentCredit" [imgHeight]="18" [showHeading]="true"
+                      [contentCredit]="cardData.contentCredit"></app-content-credit>
 </div>
