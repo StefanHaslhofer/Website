@@ -22,6 +22,7 @@ import {NgxsStoragePluginModule} from "@ngxs/storage-plugin";
 import { FooterComponent } from './footer/footer.component';
 import {MatListModule} from "@angular/material/list";
 import { ContentCreditComponent } from './content-credit/content-credit.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ContentCreditComponent } from './content-credit/content-credit.componen
     PictureCardComponent,
     ProjectDetailComponent,
     FooterComponent,
-    ContentCreditComponent
+    ContentCreditComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

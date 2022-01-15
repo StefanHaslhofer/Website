@@ -1,3 +1,5 @@
+import {ContentCredit} from './content-credit';
+
 export class ContentCardData {
 
   type: string;
@@ -8,6 +10,7 @@ export class ContentCardData {
   title: string;
   direction?: string;
   contentFile: string;
+  contentCredit?: ContentCredit[];
 
   deserialize(input: any): ContentCardData {
     if (input) {
@@ -18,6 +21,7 @@ export class ContentCardData {
       this.title = input.title;
       this.direction = input.direction;
       this.contentFile = input.contentFile;
+      this.contentCredit = input.contentCredit;
     }
 
     return this;

@@ -1,0 +1,20 @@
+[
+  {
+    "mediaPlatformName": "github",
+    "mediaPlatformUsername": "StefanHaslhofer",
+    "mediaPlatformLink": "https://github.com/StefanHaslhofer",
+    "mediaPlatformIcon": "github.svg"
+  },
+  {
+    "mediaPlatformName": "email",
+    "mediaPlatformUsername": "haslhofer.stefan@gmail.com",
+    "mediaPlatformLink": "",
+    "mediaPlatformIcon": "email.svg"
+  },
+  {
+    "mediaPlatformName": "instagram",
+    "mediaPlatformUsername": "@stefan_haslhofer",
+    "mediaPlatformLink": "https://www.instagram.com/stefan_haslhofer/",
+    "mediaPlatformIcon": "instagram.svg"
+  }
+]

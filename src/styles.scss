@@ -202,8 +202,12 @@ html {
       font-size: 100% !important;
       color: $website-primary-creme !important;
 
-      svg {
-        fill: $website-primary-creme;
+      .website-media-icon {
+        // it is not possible to fill svgs directly when they are inside an img-tag
+        // therefore it is necessary to use the css-"filter" property
+
+        // i used https://codepen.io/sosuke/pen/Pjoqqp to calculate the right properties
+        filter: invert(100%) sepia(25%) saturate(2947%) hue-rotate(191deg) brightness(119%) contrast(87%);
       }
     }
   }

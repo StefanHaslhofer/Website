@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ContentCredit} from "../models/content-credit";
+import {ContentFileService} from "../service/content-file.service";
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  contentCredit: ContentCredit[] = [];
 
-  ngOnInit() {
+  constructor(private contentFileService: ContentFileService) {
   }
 
+  ngOnInit() {
+    this.contentFileService.getFooterContent().subscribe(footer => this.contentCredit = footer);
+  }
 }
