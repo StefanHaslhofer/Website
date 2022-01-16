@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ContentCardData} from '../models/content-card-data';
-import {ContentFileService} from "../service/content-file.service";
+import {ContentFileService} from '../service/content-file.service';
+import {MatDialog} from '@angular/material/dialog';
+import {PhotoViewerComponent} from '../photo-viewer/photo-viewer.component';
 
 @Component({
   selector: 'app-picture-card',
@@ -14,11 +16,17 @@ export class PictureCardComponent implements OnInit {
   @Input()
   cardData: ContentCardData;
 
-  constructor(private contentFileService: ContentFileService) {
+  constructor(private contentFileService: ContentFileService, private dialog: MatDialog) {
   }
 
   ngOnInit() {
     this.cardData.pictureUrls.forEach(pic => this.pictures.push(this.contentFileService.getPictureUrl(this.cardData.pictureFolder, pic)));
   }
 
+  public openPhotoViewer(startIndex: number) {
+    const dialogRef = this.dialog.open(PhotoViewerComponent, {
+      width: '250px',
+      data: {pictures: this.pictures, startIndex},
+    });
+  }
 }

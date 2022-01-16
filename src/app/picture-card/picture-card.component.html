@@ -1,7 +1,7 @@
 <div class="picture-card content-card">
   <div class="picture-card-grid">
-    <div class="image-wrapper" *ngFor="let picture of pictures">
-      <div class="image" [ngStyle]="{'background-image': 'url(' + picture + ')'}">
+    <div class="image-wrapper" *ngFor="let picture of pictures; let i = index">
+      <div class="image" [ngStyle]="{'background-image': 'url(' + picture + ')'}" (click)="openPhotoViewer(i)">
       </div>
     </div>
   </div>

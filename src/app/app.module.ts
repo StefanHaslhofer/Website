@@ -18,11 +18,13 @@ import {environment} from '../environments/environment';
 import {NgxsModule} from '@ngxs/store';
 import {ProjectDetailState} from './state/project-detail.state';
 import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
-import {NgxsStoragePluginModule} from "@ngxs/storage-plugin";
-import { FooterComponent } from './footer/footer.component';
-import {MatListModule} from "@angular/material/list";
-import { ContentCreditComponent } from './content-credit/content-credit.component';
-import { SafePipe } from './safe.pipe';
+import {NgxsStoragePluginModule} from '@ngxs/storage-plugin';
+import {FooterComponent} from './footer/footer.component';
+import {MatListModule} from '@angular/material/list';
+import {ContentCreditComponent} from './content-credit/content-credit.component';
+import {SafePipe} from './safe.pipe';
+import {PhotoViewerComponent} from './photo-viewer/photo-viewer.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { SafePipe } from './safe.pipe';
     ProjectDetailComponent,
     FooterComponent,
     ContentCreditComponent,
-    SafePipe
+    SafePipe,
+    PhotoViewerComponent
   ],
   imports: [
     BrowserModule,
@@ -62,10 +65,12 @@ import { SafePipe } from './safe.pipe';
     NgxsStoragePluginModule.forRoot({
       key: 'projectDetail'
     }),
-    MatListModule
+    MatListModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PhotoViewerComponent]
 })
 export class AppModule {
 }
