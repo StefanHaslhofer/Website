@@ -1,0 +1,55 @@
+@import "src/variables.scss";
+
+.photo-viewer-picture-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  overflow: hidden;
+
+  img {
+    max-width: 80vw;
+  }
+
+  .arrow-left:hover {
+    transform: translateX(-8px);
+  }
+
+  .arrow-right:hover {
+    transform: translateX(8px);
+  }
+}
+
+.mat-icon {
+  padding: 100px 10px;
+  height: 48px !important;
+  width: 48px !important;
+  font-size: 48px;
+  position: relative;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.mat-icon:hover {
+  cursor: pointer;
+}
+
+.close-btn {
+  font-size: 40px;
+  padding: 0 0 50px 50px;
+  right: $website-margin-px;
+  top: $website-margin-px;
+  position: absolute;
+}
+
+.close-btn:hover {
+  animation: wiggle 1.0s infinite;
+}
+
+// wiggle animation for close btn
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  80% { transform: rotate(0deg); }
+  85% { transform: rotate(5deg); }
+  95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}

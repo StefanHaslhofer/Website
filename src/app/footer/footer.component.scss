@@ -1,0 +1,10 @@
+@import "src/variables.scss";
+
+.website-footer-wrapper {
+  background-color: $website-primary-dark;
+  min-height: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

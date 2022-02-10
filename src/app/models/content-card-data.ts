@@ -1,12 +1,16 @@
+import {ContentCredit} from './content-credit';
+
 export class ContentCardData {
 
   type: string;
   description: string;
-  pictureUrl: string;
-  pictureUrls: string[];
+  pictureUrl?: string;
+  pictureUrls?: string[];
+  pictureFolder: string; // instead of single pictureUrls the whole source-folder can be provided
   title: string;
   direction?: string;
-  cards: ContentCardData[]; // display information about project via cards
+  contentFile: string;
+  contentCredit?: ContentCredit[];
 
   deserialize(input: any): ContentCardData {
     if (input) {
@@ -16,7 +20,8 @@ export class ContentCardData {
       this.pictureUrls = input.pictureUrls;
       this.title = input.title;
       this.direction = input.direction;
-      this.cards = input.cards;
+      this.contentFile = input.contentFile;
+      this.contentCredit = input.contentCredit;
     }
 
     return this;

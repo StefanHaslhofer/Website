@@ -1,8 +1,12 @@
 <div class="picture-card content-card">
   <div class="picture-card-grid">
-    <div class="image-wrapper" *ngFor="let picture of cardData.pictureUrls">
-      <div class="image" [ngStyle]="{'background-image': 'url(' + picture + ')'}">
+    <div class="image-wrapper" *ngFor="let picture of pictures; let i = index">
+      <div class="image" [ngStyle]="{'background-image': 'url(' + picture + ')'}" (click)="openPhotoViewer(i)">
       </div>
     </div>
   </div>
+</div>
+<div class="content-credit-wrapper">
+  <app-content-credit *ngIf="cardData.contentCredit" [imgHeight]="18" [showHeading]="true"
+                      [contentCredit]="cardData.contentCredit"></app-content-credit>
 </div>

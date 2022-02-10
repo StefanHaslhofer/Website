@@ -50,6 +50,60 @@ body {
   }
 }
 
+app-about, app-project, app-project-detail {
+  max-width: 90%;
+}
+
+app-project-detail {
+  width: 90%;
+}
+
+/*************************** heading and subheading styling ***************************/
+.website-header {
+  margin-bottom: $website-margin;
+
+  .website-header-title {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      margin: 0;
+    }
+
+    .website-header-title-date {
+      font-size: 90%;
+      opacity: 0.5;
+    }
+  }
+}
+
+/*************************** modal styling ***************************/
+.cdk-overlay-backdrop {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.cdk-global-overlay-wrapper {
+  justify-content: center !important;
+
+  .mat-dialog-container {
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+/*************************** scrollbar styling ***************************/
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /*************************** svg-animation-styling ***************************/
 .website-simple-svg {
   width: 105%;
@@ -62,9 +116,18 @@ body {
     stroke: $website-primary-bown;
     stroke-width: 4;
   }
+
+  .website-title-line {
+    stroke: $website-primary-bown;
+    stroke-width: 4;
+  }
 }
 
-/*************************** card-styling ***************************/
+.website-title-svg {
+  width: 110% !important;
+}
+
+/*************************** card styling ***************************/
 .card-wrapper {
   margin-bottom: $website-margin;
   display: flex;
@@ -82,7 +145,7 @@ body {
   }
 
   .content-card-text {
-    margin: 15px;
+    margin: $website-margin-px;
 
     .content-card-header {
       margin-top: 3px;
@@ -94,6 +157,11 @@ body {
       h3 {
         margin: 0;
       }
+
+      button {
+        line-height: inherit;
+        height: inherit;
+      }
     }
 
     &::-webkit-scrollbar {
@@ -102,7 +170,7 @@ body {
   }
 
   app-picture-text-card {
-    width: 70%;
+    max-width: 90%;
     height: 15rem;
 
     .picture-text-card {
@@ -116,6 +184,37 @@ body {
 
   app-picture-card {
     width: 100%;
+
+    .mat-nav-list {
+      .mat-list-item {
+        color: $website-primary-dark !important;
+
+        .website-media-icon {
+          // it is not possible to fill svgs directly when they are inside an img-tag
+          // therefore it is necessary to use the css-"filter" property
+
+          // i used https://codepen.io/sosuke/pen/Pjoqqp to calculate the right properties
+          filter: invert(15%) sepia(8%) saturate(615%) hue-rotate(13deg) brightness(92%) contrast(87%) !important;
+        }
+      }
+
+      .mat-list-item:hover {
+        background-color: transparent;
+      }
+    }
+
+    .content-credit-wrapper {
+      padding-top: $website-margin-px;
+      display: flex;
+      justify-content: flex-end;
+
+      font-size: 90%;
+      opacity: 0.5;
+
+      .mat-list-base .mat-list-item {
+        height: auto;
+      }
+    }
   }
 }
 
@@ -135,6 +234,17 @@ body {
     app-picture-text-card {
       width: 85%;
       height: 25rem;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .card-wrapper {
+
+    // cards should only span over 60% in large browser-windows
+    app-picture-text-card {
+      max-width: 60%;
+      height: 15rem;
     }
   }
 }

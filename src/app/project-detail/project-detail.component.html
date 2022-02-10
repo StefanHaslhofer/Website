@@ -1,1 +1,16 @@
-<p>project-detail works!</p>
+<div class="website-header" *ngIf="siteContent">
+  <div class="website-header-title">
+    <h3>{{siteContent.title}}</h3>
+    <h3 class="website-header-title-date">{{siteContent.date}}</h3>
+  </div>
+  <svg class="website-simple-svg website-title-svg">
+    <line x1="0" y1="0" x2="100%" y2="0" class="website-title-line"/>
+  </svg>
+
+  <p>{{siteContent.description}}</p>
+</div>
+
+<div *ngFor="let cardData of siteContent?.cards" class="card-wrapper">
+  <app-picture-text-card  *ngIf="cardData.type === 'picture-text'" [cardData]="cardData"></app-picture-text-card>
+  <app-picture-card *ngIf="cardData.type === 'picture'" [cardData]="cardData"></app-picture-card>
+</div>

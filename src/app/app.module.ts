@@ -7,13 +7,24 @@ import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {NavbarComponent} from './navbar/navbar.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
 import {ProjectComponent} from './project/project.component';
 import {PictureTextCardComponent} from './picture-text-card/picture-text-card.component';
 import {AboutComponent} from './about/about.component';
-import { HttpClientModule } from '@angular/common/http';
-import { PictureCardComponent } from './picture-card/picture-card.component';
-import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import {HttpClientModule} from '@angular/common/http';
+import {PictureCardComponent} from './picture-card/picture-card.component';
+import {ProjectDetailComponent} from './project-detail/project-detail.component';
+import {environment} from '../environments/environment';
+import {NgxsModule} from '@ngxs/store';
+import {ProjectDetailState} from './state/project-detail.state';
+import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
+import {NgxsStoragePluginModule} from '@ngxs/storage-plugin';
+import {FooterComponent} from './footer/footer.component';
+import {MatListModule} from '@angular/material/list';
+import {ContentCreditComponent} from './content-credit/content-credit.component';
+import {SafePipe} from './safe.pipe';
+import {PhotoViewerComponent} from './photo-viewer/photo-viewer.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -24,7 +35,11 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
     PictureTextCardComponent,
     AboutComponent,
     PictureCardComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    FooterComponent,
+    ContentCreditComponent,
+    SafePipe,
+    PhotoViewerComponent
   ],
   imports: [
     BrowserModule,
@@ -34,10 +49,23 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
     MatToolbarModule,
     MatCardModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    NgxsModule.forRoot([ProjectDetailState], {
+      developmentMode: !environment.production
+    }),
+    NgxsReduxDevtoolsPluginModule.forRoot({
+      disabled: environment.production
+    }),
+    NgxsStoragePluginModule.forRoot({
+      key: 'projectDetail'
+    }),
+    MatListModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PhotoViewerComponent]
 })
 export class AppModule {
 }

@@ -1,0 +1,32 @@
+{
+  "title": "Skiurlaub 2021",
+  "date": "18.12.2021 - 20.12.2021",
+  "description": "Zu Beginn jeder Winterszeit kommt wieder dieses komische Gefühl, ein unerklärlichen Verlangen sich mit zwei überteuerten Holzbrettern viel zu schnell den Berg runter zu hauen. Ein wahrlich seltsames, dennoch unausweichliches Naturschauspiel, heuer dokumentiert in Saalbach-Hinterglemm mithilfe einer GoPro.",
+  "cards": [
+    {
+      "type": "picture",
+      "pictureFolder": "skiing2021/",
+      "pictureUrls": [
+        "skiing_groupphoto.jpg",
+        "IMG_20211218_115005.jpg",
+        "IMG_20211218_115017.jpg",
+        "IMG_20211218_144604.jpg",
+        "IMG_20211218_144607.jpg",
+        "IMG_20211218_144610.jpg",
+        "IMG_20211218_144615.jpg",
+        "IMG_20211219_160121.jpg",
+        "IMG_20211219_160127.jpg",
+        "IMG_20211219_160136.jpg",
+        "IMG_20211220_152059.jpg"
+      ],
+      "contentCredit": [
+        {
+          "mediaPlatformName": "instagram",
+          "mediaPlatformUsername": "@danielsteinbauer99",
+          "mediaPlatformLink": "https://www.instagram.com/danielsteinbauer99/",
+          "mediaPlatformIcon": "instagram.svg"
+        }
+      ]
+    }
+  ]
+}
