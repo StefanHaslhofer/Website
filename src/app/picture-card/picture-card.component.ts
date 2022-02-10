@@ -25,7 +25,8 @@ export class PictureCardComponent implements OnInit {
 
   public openPhotoViewer(startIndex: number) {
     const dialogRef = this.dialog.open(PhotoViewerComponent, {
-      width: '250px',
+      width: '100%',
+      maxWidth: '90%',
       data: {pictures: this.pictures, startIndex},
     });
   }

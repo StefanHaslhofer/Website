@@ -79,6 +79,11 @@ app-project-detail {
   }
 }
 
+/*************************** modal styling ***************************/
+.cdk-global-overlay-wrapper {
+  justify-content: center!important;
+}
+
 /*************************** scrollbar styling ***************************/
 html::-webkit-scrollbar {
   display: none;

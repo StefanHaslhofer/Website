@@ -1,0 +1,9 @@
+.photo-viewer-picture-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    max-width: 80vw;
+  }
+}
