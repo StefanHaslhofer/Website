@@ -237,3 +237,14 @@ html {
     }
   }
 }
+
+@media screen and (min-width: 800px) {
+  .card-wrapper {
+
+    // cards should only span over 60% in large browser-windows
+    app-picture-text-card {
+      max-width: 60%;
+      height: 15rem;
+    }
+  }
+}

@@ -55,12 +55,7 @@ import {MatDialogModule} from '@angular/material/dialog';
       developmentMode: !environment.production
     }),
     NgxsReduxDevtoolsPluginModule.forRoot({
-      disabled: environment.production,
-      stateSanitizer: (state) => {
-        return {
-          ...state
-        };
-      }
+      disabled: environment.production
     }),
     NgxsStoragePluginModule.forRoot({
       key: 'projectDetail'
