@@ -80,8 +80,18 @@ app-project-detail {
 }
 
 /*************************** modal styling ***************************/
+.cdk-overlay-backdrop {
+  background: rgba(0, 0, 0, 0.45);
+}
+
 .cdk-global-overlay-wrapper {
-  justify-content: center!important;
+  justify-content: center !important;
+
+  .mat-dialog-container {
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
 }
 
 /*************************** scrollbar styling ***************************/
@@ -184,9 +194,10 @@ html {
           // therefore it is necessary to use the css-"filter" property
 
           // i used https://codepen.io/sosuke/pen/Pjoqqp to calculate the right properties
-          filter: invert(15%) sepia(8%) saturate(615%) hue-rotate(13deg) brightness(92%) contrast(87%)!important;
+          filter: invert(15%) sepia(8%) saturate(615%) hue-rotate(13deg) brightness(92%) contrast(87%) !important;
         }
       }
+
       .mat-list-item:hover {
         background-color: transparent;
       }

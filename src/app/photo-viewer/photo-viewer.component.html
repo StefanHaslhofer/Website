@@ -1,10 +1,7 @@
+<mat-icon (click)="closeModal()" class="close-btn" aria-label="Close modal">close</mat-icon>
 <div class="photo-viewer-picture-wrapper">
-  <button mat-icon-button>
-    <mat-icon aria-label="Take a closer look">keyboard_arrow_left</mat-icon>
-  </button>
-  <img [src]="data.pictures[photoIndex]">
-  <button mat-icon-button>
-    <mat-icon aria-label="Take a closer look">keyboard_arrow_right</mat-icon>
-  </button>
+  <mat-icon (click)="adjustPhotoIndex(-1)" class="arrow-left">keyboard_arrow_left</mat-icon>
+  <img [src]="data.pictures[photoIndex]" [alt]="data.pictures[photoIndex]">
+  <mat-icon (click)="adjustPhotoIndex(1)" class="arrow-right">keyboard_arrow_right</mat-icon>
 </div>
 

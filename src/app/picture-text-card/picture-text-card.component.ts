@@ -22,7 +22,7 @@ export class PictureTextCardComponent implements OnInit {
 
   async loadProjectOverview(title: string) {
     await this.store.dispatch(new PatchProjectDetail({contentFile: this.cardData.contentFile}));
-    this.router.navigate([title], {relativeTo: this.activatedRoute});
+    await this.router.navigate([title], {relativeTo: this.activatedRoute});
   }
 
 }
