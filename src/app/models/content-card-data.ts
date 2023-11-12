@@ -11,6 +11,7 @@ export class ContentCardData {
   direction?: string;
   contentFile: string;
   contentCredit?: ContentCredit[];
+  backgroundColor?: string;
 
   deserialize(input: any): ContentCardData {
     if (input) {
@@ -22,6 +23,7 @@ export class ContentCardData {
       this.direction = input.direction;
       this.contentFile = input.contentFile;
       this.contentCredit = input.contentCredit;
+      this.backgroundColor = input.backgroundColor;
     }
 
     return this;

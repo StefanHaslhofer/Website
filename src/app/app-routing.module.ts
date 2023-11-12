@@ -5,7 +5,7 @@ import {ProjectComponent} from './project/project.component';
 import {AboutComponent} from './about/about.component';
 import {ProjectDetailComponent} from './project-detail/project-detail.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,

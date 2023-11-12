@@ -1,19 +1,20 @@
-<div class="picture-text-card content-card" [ngClass]="cardData.direction === 'reverse' ? 'content-card-reverse' : ''">
-  <div class="picture-text-card-image"
-       [ngStyle]="{'background-image': 'url(/assets/pictures/' + cardData.pictureUrl + ')'}"></div>
-  <br>
-  <div class="content-card-text picture-text-card-text">
-    <div class="content-card-header" (click)="loadProjectOverview(cardData.title)">
-      <h3>{{cardData.title}}</h3>
-      <button mat-icon-button>
-        <mat-icon aria-label="Take a closer look">keyboard_arrow_right</mat-icon>
-      </button>
-    </div>
-    <svg class="website-simple-svg">
-      <line x1="0" y1="0" x2="100%" y2="0" class="website-simple-line"/>
-    </svg>
+<div class="picture-text-card content-card" [ngClass]="cardData.direction === 'reverse' ? 'content-card-reverse' : ''"
+     [ngStyle]="{'background-color': cardData.backgroundColor}">
+    <div class="picture-text-card-image"
+         [ngStyle]="{'background-image': 'url(/assets/pictures/' + cardData.pictureUrl + ')'}"></div>
+    <br>
+    <div class="content-card-text picture-text-card-text">
+        <div class="content-card-header" (click)="loadProjectOverview(cardData.title)">
+            <h3>{{cardData.title}}</h3>
+            <button mat-icon-button>
+                <mat-icon aria-label="Take a closer look">keyboard_arrow_right</mat-icon>
+            </button>
+        </div>
+        <svg class="website-simple-svg">
+            <line x1="0" y1="0" x2="100%" y2="0" class="website-simple-line"/>
+        </svg>
 
-    {{cardData.description}}
-  </div>
+        {{cardData.description}}
+    </div>
 
 </div>

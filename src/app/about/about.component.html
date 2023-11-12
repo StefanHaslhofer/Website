@@ -1,4 +1,4 @@
-<div *ngFor="let cardData of cards" class="card-wrapper">
+<div *ngFor="let cardData of cards" class="card-wrapper px-16">
   <app-picture-text-card *ngIf="cardData.type === 'picture-text'" [cardData]="cardData"></app-picture-text-card>
   <app-picture-card *ngIf="cardData.type === 'picture'" [cardData]="cardData"></app-picture-card>
 </div>

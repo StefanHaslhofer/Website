@@ -4,7 +4,8 @@
     "title": "Skiurlaub 2021",
     "pictureUrl": "skiing2021/skiing_groupphoto.jpg",
     "description": "Zu Beginn jeder Winterszeit kommt wieder dieses komische Gefühl, ein unerklärlichen Verlangen sich mit zwei überteuerten Holzbrettern viel zu schnell den Berg runter zu hauen. Ein wahrlich seltsames, dennoch unausweichliches Natur- bzw. Kunstschauspiel (je nach Schneelage), heuer dokumentiert in Saalbach-Hinterglemm mithilfe einer GoPro.",
-    "contentFile": "skiingtrip2021.json"
+    "contentFile": "skiingtrip2021.json",
+    "backgroundColor": "#84bab8"
   },
   {
     "type": "picture-text",
@@ -12,7 +13,8 @@
     "pictureUrl": "norway/kjerag.jpg",
     "description": "After a long, demanding and expensive preparation we finally set of to Norway. From stunning fjords to gorgeous mountains we were overwhelmed with a picturesque view only known to me from stock photos and movies at this point...",
     "direction": "reverse",
-    "contentFile": "norway2021.json"
+    "contentFile": "norway2021.json",
+    "backgroundColor": "#84bab8"
   }
 ]
 
