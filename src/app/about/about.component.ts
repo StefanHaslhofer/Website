@@ -19,4 +19,5 @@ export class AboutComponent implements OnInit {
     this.contentFileService.getCards(this.aboutCardJson).subscribe(contentCards => this.cards = contentCards);
   }
 
+  protected readonly ContentCardData = ContentCardData;
 }

@@ -1,8 +1,7 @@
 import {NgModule} from '@angular/core';
 
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from "./app.component";
-import {HomeComponent} from "./home/home.component";
 import {CommonModule} from "@angular/common";
 import {NavbarComponent} from "./navbar/navbar.component";
 import {ProjectComponent} from "./project/project.component";
@@ -23,7 +22,6 @@ import {ContentFileService} from "./service/content-file.service";
 
 @NgModule({
   declarations: [
-    HomeComponent,
     NavbarComponent,
     ProjectComponent,
     PictureTextCardComponent,
@@ -48,7 +46,8 @@ import {ContentFileService} from "./service/content-file.service";
   ],
   providers: [ContentFileService],
   exports: [
-    HomeComponent
+    NavbarComponent,
+    FooterComponent
   ],
   bootstrap: [AppComponent]
 })

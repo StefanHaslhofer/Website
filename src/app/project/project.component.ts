@@ -11,7 +11,7 @@ export class ProjectComponent implements OnInit {
   // url to json file which includes the card data on the page
   private projectCardJson = 'projectCards.json';
 
-  public cards: ContentCardData[] = [];
+  public cards!: ContentCardData[];
 
   constructor(private contentFileService: ContentFileService) {
   }
