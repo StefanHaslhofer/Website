@@ -10,7 +10,7 @@ import {ContentFileService} from '../service/content-file.service';
 export class ContentCreditComponent implements OnInit {
 
   @Input()
-  public contentCredit: ContentCredit[];
+  public contentCredit!: ContentCredit[];
 
   @Input()
   public showHeading = false;
@@ -29,7 +29,7 @@ export class ContentCreditComponent implements OnInit {
     return this.contentFileService.getIconUrl('', iconName);
   }
 
-  public findPlatform(platformName: string): ContentCredit {
+  public findPlatform(platformName: string): ContentCredit | undefined {
     return this.contentCredit.find(content => content.mediaPlatformName.toUpperCase() === platformName.toUpperCase());
   }
 }

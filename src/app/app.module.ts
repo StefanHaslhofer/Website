@@ -1,34 +1,28 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
-import {AppComponent} from './app.component';
-import {HomeComponent} from './home/home.component';
-import {RouterModule} from '@angular/router';
-import {AppRoutingModule} from './app-routing.module';
-import {NavbarComponent} from './navbar/navbar.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
-import {ProjectComponent} from './project/project.component';
-import {PictureTextCardComponent} from './picture-text-card/picture-text-card.component';
-import {AboutComponent} from './about/about.component';
-import {HttpClientModule} from '@angular/common/http';
-import {PictureCardComponent} from './picture-card/picture-card.component';
-import {ProjectDetailComponent} from './project-detail/project-detail.component';
-import {environment} from '../environments/environment';
-import {NgxsModule} from '@ngxs/store';
-import {ProjectDetailState} from './state/project-detail.state';
-import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
-import {NgxsStoragePluginModule} from '@ngxs/storage-plugin';
-import {FooterComponent} from './footer/footer.component';
-import {MatListModule} from '@angular/material/list';
-import {ContentCreditComponent} from './content-credit/content-credit.component';
-import {SafePipe} from './safe.pipe';
-import {PhotoViewerComponent} from './photo-viewer/photo-viewer.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {AppComponent} from "./app.component";
+import {HomeComponent} from "./home/home.component";
+import {CommonModule} from "@angular/common";
+import {NavbarComponent} from "./navbar/navbar.component";
+import {ProjectComponent} from "./project/project.component";
+import {PictureTextCardComponent} from "./picture-text-card/picture-text-card.component";
+import {AboutComponent} from "./about/about.component";
+import {PictureCardComponent} from "./picture-card/picture-card.component";
+import {ProjectDetailComponent} from "./project-detail/project-detail.component";
+import {ContentCreditComponent} from "./content-credit/content-credit.component";
+import {PhotoViewerComponent} from "./photo-viewer/photo-viewer.component";
+import {FooterComponent} from "./footer/footer.component";
+import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatListModule} from "@angular/material/list";
+import {SafePipe} from "./safe.pipe";
+import {MatLineModule} from "@angular/material/core";
+import {MatIconModule} from "@angular/material/icon";
+import {ContentFileService} from "./service/content-file.service";
 
 @NgModule({
   declarations: [
-    AppComponent,
     HomeComponent,
     NavbarComponent,
     ProjectComponent,
@@ -38,34 +32,25 @@ import {MatDialogModule} from '@angular/material/dialog';
     ProjectDetailComponent,
     FooterComponent,
     ContentCreditComponent,
-    SafePipe,
-    PhotoViewerComponent
+    PhotoViewerComponent,
+    SafePipe
   ],
   imports: [
-    BrowserModule,
-    RouterModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatCardModule,
+    CommonModule,
     HttpClientModule,
-    MatIconModule,
-    MatButtonModule,
-    NgxsModule.forRoot([ProjectDetailState], {
-      developmentMode: !environment.production
-    }),
-    NgxsReduxDevtoolsPluginModule.forRoot({
-      disabled: environment.production
-    }),
-    NgxsStoragePluginModule.forRoot({
-      key: 'projectDetail'
-    }),
+    RouterLink,
+    RouterLinkActive,
+    MatToolbarModule,
+    RouterOutlet,
     MatListModule,
-    MatDialogModule
+    MatLineModule,
+    MatIconModule
   ],
-  providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [PhotoViewerComponent]
+  providers: [ContentFileService],
+  exports: [
+    HomeComponent
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

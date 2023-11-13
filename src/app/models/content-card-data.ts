@@ -2,14 +2,14 @@ import {ContentCredit} from './content-credit';
 
 export class ContentCardData {
 
-  type: string;
-  description: string;
+  type = "";
+  description= "";
   pictureUrl?: string;
   pictureUrls?: string[];
-  pictureFolder: string; // instead of single pictureUrls the whole source-folder can be provided
-  title: string;
+  pictureFolder= ""; // instead of single pictureUrls the whole source-folder can be provided
+  title= "";
   direction?: string;
-  contentFile: string;
+  contentFile= "";
   contentCredit?: ContentCredit[];
   backgroundColor?: string;
 

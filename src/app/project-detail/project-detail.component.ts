@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {SiteContent} from '../models/site-content';
 import {ContentFileService} from '../service/content-file.service';
-import {ProjectDetailState} from '../state/project-detail.state';
 
 @Component({
   selector: 'app-project-detail',
@@ -9,7 +8,7 @@ import {ProjectDetailState} from '../state/project-detail.state';
 })
 export class ProjectDetailComponent implements OnInit {
 
-  siteContent: SiteContent;
+  siteContent?: SiteContent;
 
   constructor(private contentFileService: ContentFileService) {
   }

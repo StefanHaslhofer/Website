@@ -2,10 +2,10 @@ import {ContentCardData} from './content-card-data';
 
 export class SiteContent {
 
-  title: string;
-  description: string;
-  date: string;
-  cards: ContentCardData[]; // display information about project via cards
+  title = "";
+  description = "";
+  date = "";
+  cards: ContentCardData[] = []; // display information about project via cards
 
   deserialize(input: any): SiteContent {
     if (input) {

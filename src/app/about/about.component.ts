@@ -10,7 +10,7 @@ export class AboutComponent implements OnInit {
 
   private aboutCardJson = 'aboutCards.json';
 
-  public cards: ContentCardData[];
+  public cards!: ContentCardData[];
 
   constructor(private contentFileService: ContentFileService) {
   }

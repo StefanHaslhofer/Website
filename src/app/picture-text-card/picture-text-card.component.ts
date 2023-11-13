@@ -1,8 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ContentCardData} from '../models/content-card-data';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Store} from '@ngxs/store';
-import {PatchProjectDetail} from '../state/project-detail.action';
 
 @Component({
   selector: 'app-picture-text-card',
@@ -12,16 +10,16 @@ import {PatchProjectDetail} from '../state/project-detail.action';
 export class PictureTextCardComponent implements OnInit {
 
   @Input()
-  cardData: ContentCardData;
+  cardData!: ContentCardData;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private store: Store) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
   }
 
   async loadProjectOverview(title: string) {
-    await this.store.dispatch(new PatchProjectDetail({contentFile: this.cardData.contentFile}));
+    // await this.store.dispatch(new PatchProjectDetail({contentFile: this.cardData.contentFile}));
     await this.router.navigate([title], {relativeTo: this.activatedRoute});
   }
 

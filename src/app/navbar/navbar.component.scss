@@ -1,9 +1,5 @@
-@import "src/variables.scss";
-
-$navbar-white: rgba($website-primary-white, 1);
-$navbar-brown: rgba($website-primary-bown, 0.9);
-$navbar-green-light: rgba($website-primary-neon-green-light, 0.7);
-$navbar-yellow: rgba($website-primary-neon-yellow, 1);
+$navbar-white: rgba(white, 1);
+$navbar-brown: rgba(#987654, 0.9);
 
 
 .website-toolbar {

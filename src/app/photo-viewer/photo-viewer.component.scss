@@ -1,5 +1,3 @@
-@import "src/variables.scss";
-
 .photo-viewer-picture-wrapper {
   display: flex;
   justify-content: space-between;
@@ -36,8 +34,8 @@
 .close-btn {
   font-size: 40px;
   padding: 0 0 50px 50px;
-  right: $website-margin-px;
-  top: $website-margin-px;
+  right: 15px;
+  top: 15px;
   position: absolute;
 }
 
