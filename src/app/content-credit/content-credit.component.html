@@ -1,9 +1,9 @@
-<div class="website-media-wrapper">
-  <p class="website-media-heading" *ngIf="showHeading">Photos by:</p>
+<div class="website-media-wrapper w-80">
+  <p class="py-4" *ngIf="showHeading">Photos by:</p>
   <mat-nav-list>
-    <mat-list-item *ngFor="let content of contentCredit">
+    <mat-list-item class="text-website-white" *ngFor="let content of contentCredit">
       <a matLine [href]="content.mediaPlatformLink"
-         target="_blank">{{content.mediaPlatformUsername}}</a>
+         target="_blank" class="text-website-white">{{content.mediaPlatformUsername}}</a>
       <img class="website-media-icon" [height]="imgHeight" [width]="imgHeight"
            [src]="getIcon(content.mediaPlatformIcon)|safe:'resourceUrl'" alt="icon">
     </mat-list-item>
