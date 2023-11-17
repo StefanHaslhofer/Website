@@ -1,3 +1,12 @@
-<div class="flex justify-center align-middle bg-black h-64">
-  <app-content-credit [contentCredit]="contentCredit"></app-content-credit>
+<div class="flex justify-center items-center bg-black h-64">
+  <mat-nav-list class="h-fit">
+    <mat-list-item class="w-80" *ngFor="let content of contentCredit">
+      <div class="flex flex-row justify-between">
+        <a matLine [href]="content.mediaPlatformLink"
+           target="_blank" class="text-website-white">{{content.mediaPlatformUsername}}</a>
+        <img class="website-media-icon" [height]="imgHeight" [width]="imgHeight"
+             [src]="getIcon(content.mediaPlatformIcon)|safe:'resourceUrl'" alt="icon">
+      </div>
+    </mat-list-item>
+  </mat-nav-list>
 </div>

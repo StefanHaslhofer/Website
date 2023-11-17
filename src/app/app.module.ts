@@ -9,7 +9,6 @@ import {PictureTextCardComponent} from "./picture-text-card/picture-text-card.co
 import {AboutComponent} from "./about/about.component";
 import {PictureCardComponent} from "./picture-card/picture-card.component";
 import {ProjectDetailComponent} from "./project-detail/project-detail.component";
-import {ContentCreditComponent} from "./content-credit/content-credit.component";
 import {PhotoViewerComponent} from "./photo-viewer/photo-viewer.component";
 import {FooterComponent} from "./footer/footer.component";
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
@@ -29,7 +28,6 @@ import {ContentFileService} from "./service/content-file.service";
     PictureCardComponent,
     ProjectDetailComponent,
     FooterComponent,
-    ContentCreditComponent,
     PhotoViewerComponent,
     SafePipe
   ],
