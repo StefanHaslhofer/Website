@@ -18,6 +18,4 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     this.contentFileService.getCards(this.aboutCardJson).subscribe(contentCards => this.cards = contentCards);
   }
-
-  protected readonly ContentCardData = ContentCardData;
 }

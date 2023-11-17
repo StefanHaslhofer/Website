@@ -25,7 +25,7 @@ export class ContentFileService {
   }
 
   public getCards(jsonUrl: string): Observable<ContentCardData[]> {
-    return this.getJSON(jsonUrl).pipe(map((data: any[]) => data.map(card => new ContentCardData().deserialize(card))));
+    return this.getJSON(jsonUrl).pipe(map((data: any[]) => data.map(card => card as ContentCardData)));
   }
 
   public getFooterContent(): Observable<ContentCredit[]> {
@@ -33,7 +33,7 @@ export class ContentFileService {
   }
 
   public getSiteContent(jsonUrl: string): Observable<SiteContent> {
-    return this.getJSON(jsonUrl).pipe(map((data: any) => new SiteContent().deserialize(data)));
+    return this.getJSON(jsonUrl).pipe(map((data: any) => data as SiteContent));
   }
 
   public getPictureUrl(dir: string, file: string): string {
