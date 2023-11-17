@@ -1,14 +1,14 @@
-<mat-toolbar class="fixed text-website-white uppercase flex justify-center gap-40 bg-black h-20 top-0" >
-  <div class="website-toolbar-options">
-    <a [routerLink]="'/about'" routerLinkActive="website-toolbar-active-link">
+<mat-toolbar class="fixed text-website-white uppercase flex justify-around bg-black h-20 top-0">
+  <div class="flex justify-end w-2/5 ">
+    <a [routerLink]="'/about'" class="hover-underline-animation after:bg-website-white px-8">
       <h1>About</h1>
     </a>
   </div>
-  <div class="text-xl">
+  <div class="text-xl px-8">
     <h1>Stefan Haslhofer</h1>
   </div>
-  <div class="website-toolbar-options">
-    <a [routerLink]="'/projects'" routerLinkActive="website-toolbar-active-link">
+  <div class="flex justify-start w-2/5 ">
+    <a [routerLink]="'/projects'" class="hover-underline-animation after:bg-website-white px-8">
       <h1>Projects</h1>
     </a>
   </div>

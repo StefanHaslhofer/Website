@@ -11,6 +11,9 @@ module.exports = {
         'website-creme': '#eeeeeb',
         'website-dark': '#31302B',
         'website-brown': '#987654'
+      },
+      transitionTimingFunction: {
+        'website-cubic': 'cubic-bezier(0.445, 0.045, 0.355, 1)'
       }
     },
   },

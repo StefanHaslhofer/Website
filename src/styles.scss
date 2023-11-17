@@ -47,27 +47,6 @@ body {
   margin: 0;
 }
 
-/*************************** heading and subheading styling ***************************/
-.website-header {
-  margin-bottom: 5rem;
-
-  .website-header-title {
-    text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    h3 {
-      margin: 0;
-    }
-
-    .website-header-title-date {
-      font-size: 90%;
-      opacity: 0.5;
-    }
-  }
-}
-
 /*************************** modal styling ***************************/
 .cdk-overlay-backdrop {
   background: rgba(0, 0, 0, 0.45);
@@ -105,15 +84,6 @@ html {
     stroke: #987654;
     stroke-width: 4;
   }
-
-  .website-title-line {
-    stroke: #987654;
-    stroke-width: 4;
-  }
-}
-
-.website-title-svg {
-  width: 110% !important;
 }
 
 /*************************** card styling ***************************/
